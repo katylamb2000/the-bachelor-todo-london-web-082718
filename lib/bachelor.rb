@@ -32,6 +32,7 @@ def count_contestants_by_hometown(data, hometown)
         if v["hometown"] == hometown
           count << contestant["name"]
         end
+        return count.length
       end
         
     end
