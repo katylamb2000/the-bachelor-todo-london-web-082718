@@ -30,8 +30,8 @@ def count_contestants_by_hometown(data, hometown)
       contestant_hash.each do |contestant|
         if contestant["hometown"] == hometown
           count += 1
-          return count
         end
+        count
       end
     end
   end
