@@ -41,7 +41,7 @@ end
 def get_occupation(data, hometown)
    data.each do |season, contestant_hash|
      contestant_hash.each do |contestant|
-       contestant.find { |v| v == hometown }
+      if contestant.find { |v| v == hometown }
          return contestant["occupation"]
        end
      end
