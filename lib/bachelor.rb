@@ -65,8 +65,8 @@ def get_average_age_for_season(data, season)
   end
     end
   end
-  ave = (age.floor/count)
-       return ave
+  ave = (age/count)
+       return ave.floor
 end
 
 end
