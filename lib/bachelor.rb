@@ -4,7 +4,7 @@ require "pry"
 def get_first_name_of_season_winner(data, season)
   data[season].each do |contestant_keys, constestant_values|
     if constestant_values == "Winner"
-    return contestant["name"].split(" ")[0]  
+    return contestant_keys["name"].split(" ")[0]  
         end 
       end
     end
