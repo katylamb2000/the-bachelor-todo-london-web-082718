@@ -29,7 +29,7 @@ def count_contestants_by_hometown(data, hometown)
      data.each do |season, contestant_hash|
       contestant_hash.each do |contestant|
         if contestant["hometown"] == hometown
-          count << contestant["assert_not_same"]
+          count << contestant["name"]
         end
       end
         return count.length
