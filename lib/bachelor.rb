@@ -61,12 +61,13 @@ def get_average_age_for_season(data, season)
       if contestant_key == "age"
         count += 1
         age += contestant_value.to_f
-       average_age = (age/count).floor
+       ave = (age/count).floor
+       ave
   end
     end
   end
 end
-average_age
+
 end
         
         
