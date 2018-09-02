@@ -4,19 +4,14 @@ require "pry"
 def get_first_name_of_season_winner(data, season)
   data[season].each do |contestant_keys, constestant_values|
     if constestant_values == "Winner"
-    return contestant_vales["name"].split.first 
+      contestant_vales["name"].split.first 
         end 
       end
     end
 
 
- 
-    
-
-
-
-# def get_contestant_name(data, occupation)
-# #   data.each do |season, contestants|
+def get_contestant_name(data, occupation)
+  data.each do |season, contestants|
 # #     contestants.each do |contestant_hash|
 # #       if contestant_hash["occupation"] == occupation
 # #         return contestant_hash["name"]
