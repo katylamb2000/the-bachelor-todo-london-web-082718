@@ -7,7 +7,7 @@ def get_first_name_of_season_winner(data, season)
     contestant_hash.each do |k,v|
     if k["status"] == "Winner"
       # full_name = people["name"]
-      return contestant["name"].split(" ").first 
+      return k["name"].split(" ").first 
         end 
       end
     end
