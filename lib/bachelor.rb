@@ -31,14 +31,13 @@ def count_contestants_by_hometown(data, hometown)
         contestant.each do |k,v|
         if v["hometown"] == hometown
           count += 1
-      end
       
       end
     end
   end
-  count
+  
 end
-
+count
 # def get_occupation(data, hometown)
 #   # data.each do |season, contestant_hash|
 #   #   contestant_hash.each do |k,v|
