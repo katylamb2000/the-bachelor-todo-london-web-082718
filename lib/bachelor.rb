@@ -58,7 +58,7 @@ def get_average_age_for_season(data, season)
      contestant_hash.each do |contestant|
        contestant.each do |contestant_key, contestant_value|
       if contestant_key == ["age"]
-        age += "age"
+        age += contestant_value
         count += 1
         average_age = age/count.ceil
         average_age
