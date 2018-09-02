@@ -5,9 +5,9 @@ def get_first_name_of_season_winner(data, season)
 data.each do |season_info, constestants_hash|
   if season_info == season
     # binding.pry
-    contestant_hash.each do |contestant |
-   if contestants["status"] == "Winner"
-     return contestants["name"].split(" ")[0]
+    contestant_hash.each do |contestant|
+   if contestant["status"] == "Winner"
+     return contestant["name"].split(" ")[0]
    end
  end
  end
