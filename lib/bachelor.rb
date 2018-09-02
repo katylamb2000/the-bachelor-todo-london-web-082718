@@ -14,25 +14,15 @@ def get_first_name_of_season_winner(data, season)
   end
 end
     
-#       data[season].each do |people|
-#       people.each do |k,v|
-#         if v == "Winner"
-#             full_name = people["name"]
-#             return full_name.split(' ').first
-#         end 
-#       end
-#     end
-# end
-
-
-# def get_contestant_name(data, occupation)
-#   data.each do |season, contestants|
-# # #     contestants.each do |contestant_hash|
-# #       if contestant_hash["occupation"] == occupation
-# #         return contestant_hash["name"]
-# # end
-# # end
-# end
+def get_contestant_name(data, occupation)
+  data.each do |season, contestant_hash|
+    contestant_hash.each do |contestant|
+      if contestant["occupation"] == occupation
+        return contestant_hash["name"]
+      end
+    end
+  end
+end
 
 # def count_contestants_by_hometown(data, hometown)
 #   # count_hometown = []
