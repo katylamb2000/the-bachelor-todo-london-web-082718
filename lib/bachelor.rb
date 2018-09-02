@@ -7,7 +7,7 @@ data.each do |season_info, constestants_hash|
     binding.pry
     seasson_info.each do |contestants_hash, contestant |
    if contestants["status"] == "Winner"
-     return contestant["name"].split(" ")[0]
+     return contestants["name"].split(" ")[0]
    end
  end
  end
