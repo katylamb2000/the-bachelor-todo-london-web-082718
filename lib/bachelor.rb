@@ -4,10 +4,9 @@ require "pry"
 def get_first_name_of_season_winner(data, season)
   data.each do |season_num, contestant_hash|
     if season_num == season
-    contestant_hash.each do |k,v|
-    if k["status"] == "Winner"
-      # full_name = people["name"]
-      return k["name"].split(" ").first 
+    contestant_hash.each do |contestant_key, contestant_value|
+    if contestant_key["status"] == "Winner"
+      return contestant_key["name"].split(" ").first 
         end 
       end
     end
@@ -28,8 +27,8 @@ def count_contestants_by_hometown(data, hometown)
    count = 0
      data.each do |season, contestant_hash|
       contestant_hash.each do |contestant|
-        contestant.each do |k,v|
-        if v == hometown
+        contestant.each do |contestant_key, contestant_value|
+        if contestant_value == hometown
           count += 1
       end
     end
@@ -41,27 +40,16 @@ end
 def get_occupation(data, hometown)
    data.each do |season, contestant_hash|
      contestant_hash.each do |contestant|
-       contestant.each do |k,v|
-      if v == hometown 
+       contestant.each do |contestant_key, contestant_value|
+      if contestant_value == hometown 
          return contestant["occupation"]
        end
      end
    end
  end
  end
-
-# def get_occupation(data, hometown)
-#   # code here
-#   data.each do |season, array|
-#     array.each do |hash|
-#       hash.each do |k,v|
-#         if v == hometown
-#           return hash["occupation"]
-#         end
-#       end
-#     end
-#   end
-
+ 
+ 
 
 # def get_average_age_for_season(data, season)
 #   # code here
