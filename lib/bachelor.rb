@@ -64,6 +64,7 @@ def get_average_age_for_season(data, season)
   end
 end
 age.length
+age.reduce(:+).to_f / age.size
 end
         
         
