@@ -36,6 +36,7 @@ def count_contestants_by_hometown(data, hometown)
         return count.length
     end
   end
+end
 
 # def get_occupation(data, hometown)
 #   # data.each do |season, contestant_hash|
