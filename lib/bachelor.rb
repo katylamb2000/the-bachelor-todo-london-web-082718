@@ -33,7 +33,7 @@ def count_contestants_by_hometown(data, hometown)
           count << contestant["name"]
         end
       end
-        return count.length
+        
     end
   end
 end
