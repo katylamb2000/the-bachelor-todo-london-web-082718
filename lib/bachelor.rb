@@ -2,8 +2,9 @@
 require "pry"
 
 def get_first_name_of_season_winner(data, season)
-  data[season].each do |contestant|
-    contestant.each do |k,v|
+  data.each do |season_num, contestant_hash|
+    if season_num == season
+    contestant_hash.each do |k,v|
     if k["status"] == "Winner"
       # full_name = people["name"]
       return contestant["name"].split(" ").first 
