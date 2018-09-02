@@ -4,7 +4,7 @@ require "pry"
 def get_first_name_of_season_winner(data, season)
 data.each do |season_info, constestants|
   if season_info == season
-    seasson_info.each do |girl|
+    seasson_info.each do ||
    if girl["status"] == "Winner"
      return girl["name"].split(" ")[0]
    end
@@ -12,7 +12,7 @@ data.each do |season_info, constestants|
  end
  end
  
-     
+   binding.pry  
 
 
 
